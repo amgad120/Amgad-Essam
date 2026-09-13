@@ -15,7 +15,15 @@
 
 	<link rel="icon" type="image/png" href="images/favicon3.png" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<script>
+		(function () {
+			if (localStorage.getItem('theme') === 'light') {
+				document.documentElement.classList.add('light-mode');
+			}
+		})();
+	</script>
 	<noscript>
+
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
@@ -224,9 +232,12 @@
 				</li>
 				<li class="active"><a href="#projects">PROJECT</a></li>
 				<li class="active"><a href="#skills">skills</a></li>
+				<button id="themeToggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+					<span class="icon solid fa-moon"></span>
+				</button>
 		</nav>
 		<!-- Main -->
-		<div   id="main">
+		<div id="main">
 			<!-- Featured Post -->
 			<div id="projects" class="projects-header">
 				<div class="about-label">
@@ -235,10 +246,11 @@
 				</div>
 				<h2>Featured <span>Projects</span></h2>
 			</div>
-			<article  class="post featured">
+			<article class="post featured">
 				<header class="major">
 					<h2><a href="https://github.com/amgad120/VEHICLE-DETECTION-AND-TRAFFIC-ANALYSIS">Car Detection &
 							Classification</a></h2>
+					<span class="post-category">Computer Vision</span>
 					<p>An AI-based system that detects and classifies vehicles, counts them, and determines whether the
 						road is crowded or not.</p>
 				</header>
@@ -254,15 +266,17 @@
 			<section class="posts">
 				<article>
 					<header>
-						<h2><a href="https://github.com/amgad120/Pneumonia-Detection-AI">Pneumonia Detection<br />
-								Computer Vision</a></h2>
+						<h2><a href="https://github.com/amgad120/Addiction-Medicine-RAG-Assistant">Addiction Medicine
+								RAG Assistant<br />
+								<span class="post-category">RAG|LLM|NLP</span>
 					</header>
-					<a href="https://github.com/amgad120/Pneumonia-Detection-AI" class="image fit"><img
-							src="images/pic02.jpg" alt="" /></a>
-					<p>A deep learning system that analyzes chest X-ray images to classify them as Pneumonia or Normal
-						using CNN-based architectures.</p>
+					<a href="https://github.com/amgad120/Addiction-Medicine-RAG-Assistant" class="image fit"><img
+							src="images/Addiction Medicine RAG Assistant.png" alt="" /></a>
+					<p>An AI-powered RAG assistant that retrieves relevant knowledge from addiction medicine resources
+						and generates accurate, context-based answers using Large Language Models.</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/amgad120/Pneumonia-Detection-AI" class="button">VIEW PROJECT</a>
+						<li><a href="https://github.com/amgad120/Addiction-Medicine-RAG-Assistant" class="button">VIEW
+								PROJECT</a>
 						</li>
 					</ul>
 				</article>
@@ -270,7 +284,7 @@
 					<header>
 						<h2><a href="https://github.com/amgad120/Neural-Networks-MNIST-MLP-Project">MNIST Digit
 								Classification<br />
-								Neural Networks</a></h2>
+								<span class="post-category">Neural Networks</span>
 					</header>
 					<a href="https://github.com/amgad120/Neural-Networks-MNIST-MLP-Project" class="image fit"><img
 							src="images/pic03.jpg" alt="" /></a>
@@ -283,23 +297,23 @@
 				</article>
 				<article>
 					<header>
-						<h2><a href="https://github.com/amgad120/IMDB-Sentiment-Analysis">Sentiment Analysis<br />
-								NLP|Machine Learning</a></h2>
+						<h2><a href="https://github.com/amgad120/Pneumonia-Detection-AI">Pneumonia Detection<br />
+								<span class="post-category">Computer Vision</span>
 					</header>
-					<a href="https://github.com/amgad120/IMDB-Sentiment-Analysis" class="image fit"><img
-							src="images/pic04.jpg" alt="" /></a>
-					<p>An NLP model that analyzes reviews and feedback to determine whether the sentiment is Positive or
-						Negative.</p>
+					<a href="https://github.com/amgad120/Pneumonia-Detection-AI" class="image fit"><img
+							src="images/pic02.jpg" alt="" /></a>
+					<p>A deep learning system that analyzes chest X-ray images to classify them as Pneumonia or Normal
+						using CNN-based architectures.</p>
 					<ul class="actions special">
-						<li><a href="https://github.com/amgad120/IMDB-Sentiment-Analysis" class="button">VIEW
-								PROJECT</a></li>
+						<li><a href="https://github.com/amgad120/Pneumonia-Detection-AI" class="button">VIEW PROJECT</a>
+						</li>
 					</ul>
 				</article>
 				<article>
 					<header>
 						<h2><a href="https://github.com/amgad120/Fashion_MNIST_Classification">Clothing
 								Classification<br />
-								Computer Vision</a></h2>
+								<span class="post-category">Computer Vision</span>
 					</header>
 					<a href="https://github.com/amgad120/Fashion_MNIST_Classification" class="image fit"><img
 							src="images/pic05.jpg" alt="" /></a>
@@ -312,8 +326,38 @@
 				</article>
 				<article>
 					<header>
+						<h2><a href="https://github.com/amgad120/IMDB-Sentiment-Analysis">Sentiment Analysis<br />
+								<span class="post-category">NLP|Machine Learning</span>
+					</header>
+					<a href="https://github.com/amgad120/IMDB-Sentiment-Analysis" class="image fit"><img
+							src="images/pic04.jpg" alt="" /></a>
+					<p>An NLP model that analyzes reviews and feedback to determine whether the sentiment is Positive or
+						Negative.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/amgad120/IMDB-Sentiment-Analysis" class="button">VIEW
+								PROJECT</a></li>
+					</ul>
+				</article>
+				<article>
+					<header>
+						<h2><a href="https://github.com/amgad120/Data-Professional-Survey-Dashboard">Data Professional
+								Survey Dashboard<br />
+								<span class="post-category">Data Analysis</span>
+					</header>
+					<a href="https://github.com/amgad120/Data-Professional-Survey-Dashboard" class="image fit"><img
+							src="images/Data Professional Survey Dashboard.png" alt="" /></a>
+					<p>An interactive Power BI dashboard that analyzes data professionals' salaries, job roles,
+						programming languages, job satisfaction, and career trends.</p>
+					<ul class="actions special">
+						<li><a href="https://github.com/amgad120/Data-Professional-Survey-Dashboard" class="button">VIEW
+								PROJECT</a></li>
+					</ul>
+				</article>
+
+				<article>
+					<header>
 						<h2><a href="https://github.com/amgad120/Obstacle-Avoiding-Robot">Obstacle Avoiding Robot<br />
-								Robotics|Arduino</a></h2>
+								<span class="post-category">Robotics|Arduino</span>
 					</header>
 					<a href="https://github.com/amgad120/Obstacle-Avoiding-Robot" class="image fit"><img
 							src="images/pic06.jpg" alt="" /></a>
@@ -327,7 +371,7 @@
 				<article>
 					<header>
 						<h2><a href="https://github.com/amgad120/Robotic-Arm">Robotic Arm<br />
-								Robotics|Arduino</a></h2>
+								<span class="post-category">Robotics|Arduino</span>
 					</header>
 					<a href="https://github.com/amgad120/Robotic-Arm" class="image fit"><img src="images/pic07.jpg"
 							alt="" /></a>

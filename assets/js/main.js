@@ -294,3 +294,27 @@ setInterval(() => {
     }, 500);
 
 }, 2500);
+
+document.addEventListener('DOMContentLoaded', function () {
+	var toggle = document.getElementById('themeToggle');
+	if (!toggle) return;
+
+	var icon = toggle.querySelector('.icon');
+
+	function updateIcon() {
+		var isLight = document.documentElement.classList.contains('light-mode');
+		icon.classList.toggle('fa-moon', !isLight);
+		icon.classList.toggle('fa-sun', isLight);
+	}
+
+	updateIcon();
+
+	toggle.addEventListener('click', function () {
+		document.documentElement.classList.toggle('light-mode');
+		var isLight = document.documentElement.classList.contains('light-mode');
+		localStorage.setItem('theme', isLight ? 'light' : 'dark');
+		updateIcon();
+	});
+});
+
+
