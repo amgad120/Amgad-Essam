@@ -7205,3 +7205,8 @@ html.light-mode #navPanel .links li a {
 	color: #18bfef !important;
 	border-color: #18bfef;
 }
+
+#navPanelToggle {
+	line-height: 1.1 !important;
+	border-radius: 6px;
+}
